@@ -27,9 +27,7 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
 
 (async () => {
 
-  console.log(`Trophy And Crown Hack Safe! [ReEdit]
-By : ${chalk.white('salamuu#8745')} - Credit : @dkmpostor & @Eskey
-`);
+  Oleh : ${ ( 'ARNAZX#9611' ) }
 
   const auth = rs.question('Masukan mode Authen! : ');
   console.log('');
