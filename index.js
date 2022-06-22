@@ -26,8 +26,13 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
 });
 
 (async () => {
+__  __ _   _ _____ _____        __
+|  \/  | | | | ____/ _ \ \      / /
+| |\/| | | | |  _|| | | \ \ /\ / /
+| |  | | |_| | |__| |_| |\ V  V /
+|_|  |_|\___/|_____\__\_\ \_/\_/
 
-  Oleh : ${ ( 'ARNAZX#9611' ) }
+  Oleh : ${ ( 'MUEQW' ) }
 
   const auth = rs.question('Masukan mode Authen! : ');
   console.log('');
@@ -46,11 +51,11 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
       const trophy = data.User.SkillRating;
       const crown = data.User.Crowns;
 
-console.log(chalk.bgBlack(`\r[ ${moment().format('HH:mm:ss')} ] ${chalk.white(`User : ${username}`)} | ${chalk.gold(`Trophy : ${trophy}`)} | ${chalk.red(`Crown : ${crown}`)}`));
+console.log(kapur.bgBlack(`\r[ ${moment().format('HH:mm:ss')} ] ${kapur.white(`User : ${username}`)} | ${kapur.gren(`Trophy : ${trophy}`)} | ${kapur.red(`Crown : ${crown}`)}`));
       await sleep(6000);
 
     } else if (result == 'BANNED') {
-      console.log(chalk.bgRed(`Your Account Anda Telah Di Banned`));
+      console.log(kapur.bgRed(`Your Account Anda Telah Di Banned`));
      break;
     }
   }
