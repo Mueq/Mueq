@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const moment = require('moment');
 const chalk = require('chalk');
 const rs = require('readline-sync');
+const chalkRainbow = require('chalk-rainbow')
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -27,18 +28,32 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
 
 (async () => {
 
-  console.log(`Trophy And Crown Hack Safe! [ReEdit]
-By : ${chalk.bold('xsalam#8745')} - Credit : @dkmpostor & @Eskey
-`);
+  console.log(chalkRainbow(`
+ ▄▄▄       ██▀███   ███▄    █  ▄▄▄      ▒███████▒▒██   ██▒▓██   ██▓▒███████▒
+▒████▄    ▓██ ▒ ██▒ ██ ▀█   █ ▒████▄    ▒ ▒ ▒ ▄▀░▒▒ █ █ ▒░ ▒██  ██▒▒ ▒ ▒ ▄▀░
+▒██  ▀█▄  ▓██ ░▄█ ▒▓██  ▀█ ██▒▒██  ▀█▄  ░ ▒ ▄▀▒░ ░░  █   ░  ▒██ ██░░ ▒ ▄▀▒░ 
+░██▄▄▄▄██ ▒██▀▀█▄  ▓██▒  ▐▌██▒░██▄▄▄▄██   ▄▀▒   ░ ░ █ █ ▒   ░ ▐██▓░  ▄▀▒   ░
+ ▓█   ▓██▒░██▓ ▒██▒▒██░   ▓██░ ▓█   ▓██▒▒███████▒▒██▒ ▒██▒  ░ ██▒▓░▒███████▒
+ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ▒░   ▒ ▒  ▒▒   ▓▒█░░▒▒ ▓░▒░▒▒▒ ░ ░▓ ░   ██▒▒▒ ░▒▒ ▓░▒░▒
+  ▒   ▒▒ ░  ░▒ ░ ▒░░ ░░   ░ ▒░  ▒   ▒▒ ░░░▒ ▒ ░ ▒░░   ░▒ ░ ▓██ ░▒░ ░░▒ ▒ ░ ▒
+  ░   ▒     ░░   ░    ░   ░ ░   ░   ▒   ░ ░ ░ ░ ░ ░    ░   ▒ ▒ ░░  ░ ░ ░ ░ ░
+      ░  ░   ░              ░       ░  ░  ░ ░     ░    ░   ░ ░       ░ ░    
+                                        ░                  ░ ░     ░        
+                                                  
+                                                                                      
 
-  const auth = rs.question('Enter Authentication Code! : ');
+By : ${('ARNAZX#9611')}
+`));
+
+  const auth = rs.question(chalkRainbow('Token : '));
   console.log('');
 
   while (true) {
 
-
     const result = await GoStumble(auth);
     if (!result) {
+
+      console.log(chalkRainbow(`\r[ ${moment().format('HH:mm:ss')} ] Auth Eror !`));
 
     } else if (result.includes('User')) {
 
@@ -48,14 +63,19 @@ By : ${chalk.bold('xsalam#8745')} - Credit : @dkmpostor & @Eskey
       const trophy = data.User.SkillRating;
       const crown = data.User.Crowns;
 
-console.log(chalk.bgBlack(`\r[ ${moment().format('HH:mm:ss')} ] ${chalk.white(`User : ${username}`)} | ${chalk.grey(`Trophy : ${trophy}`)} | ${chalk.red(`Crown : ${crown}`)}`));
-      await sleep(6000);
+      console.log(chalkRainbow(`\r
+-  [${moment().format('HH:mm:ss')}]  -
+>  ${(`ID By Arnazx : ${country}`)}
+>  ${(`USER By Arnazx : ${username}`)}  
+>  ${(`TROPHY By Arnazx : ${trophy}`)}  
+>  ${(`CROWN By Arnazx : ${crown}`)}
+>  ${(`STATUS : Success !!`)}`));
+      await sleep(7000);
 
     } else if (result == 'BANNED') {
-      console.log(chalk.bgRed(`Your Account has been Banned`));
-     break;
+      console.log(chalk.bgRed(`Mampus Banned Makanya jangan brutal`));
+      break;
     }
   }
-
 
 })();
